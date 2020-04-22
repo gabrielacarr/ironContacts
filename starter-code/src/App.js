@@ -193,6 +193,7 @@ export default App;
 // this is for array that is static, no further adjustments 
 // make code smaller, remove return, add (), add index as param
 // create a key tag for tr code
+// if you use an inde of a ky and sort on your array, no longer array, no longer an original placement of array
 // displayFive =  () => {
 // return this.state.fiveContacts.map((eachContact, index) => {
 //   return ( 
