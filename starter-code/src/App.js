@@ -45,3 +45,9 @@ export default App;
 // .slice(0,5) // want to begin at index 0 and end at 5 elements
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice/
 
+// STATE
+
+// state object //
+// creatinf attributes/ keys
+// special feature, once you make changes inside the state, the react will render to those new changes
+
