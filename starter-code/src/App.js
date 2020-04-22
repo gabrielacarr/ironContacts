@@ -57,3 +57,18 @@ export default App;
 // to print the five contacts
 // in console it reflects an array of five objects
 
+// CONSOLE LOG FIVE CONTACTS
+
+// console.log(this.state.fiveContacts), after render()
+// to print the five contacts
+// in console it reflects an array of five objects
+
+// CREATING A TABLE
+
+// line 16
+// create a table // html format is <table></table>
+// <thead> first rows with headings </thead>
+// <tr> row </tr>
+// <th> thread heading </th>
+// <th>table heading </th>
+// <tbody> anything below the heading row </tbody>
