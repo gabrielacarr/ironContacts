@@ -1,6 +1,7 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-# LAB | React IronContacts | BRIE NOTATIONS & GUIDELINES
+# LAB | React IronContacts 
+# BRIE NOTATIONS & GUIDELINES
 
 ## Introduction
 
@@ -52,10 +53,10 @@ At the end of this iteration, your application should look like this:
 
 
 ## PROCESS
-### How do we get there? What's the thought process?
+## How do we get there? What's the thought process?
 ### Steps for completing: Iteration 1
 
-FIRST: What are we setting up in the instructions and what is it?
+### FIRST: What are we setting up and how we we determine what is it?
 
 ```
  - Need to import producer's contacts from contacts.json into App.js inside the src folder
@@ -67,23 +68,23 @@ FIRST: What are we setting up in the instructions and what is it?
 
 ```
 
-NEXT: What are the instructions asking to do? 
+### NEXT: What are the instructions asking to do? 
 
 ```
  1. Build a table with the first five contacts from contact.json 
- 2. Display the keys of each contact
- 3. Initialize a state
+ 2. Initialize a state
+ 3. Display a table of the five contacts
  
 ```
 
-How is that accomplised? 
-Let's go follow the steps above, one at a time:
+### How is that accomplised? 
+### Let's go follow the steps above, one at a time:
 
 
 1. Build a table with the first five contacts from contact.json 
 
 ```
- - What method should be used to grab the first five contacts? How do we do this?
+ - What method should be used to return the first five contacts? How do we do this?
  - By creating a new array and applying slice method
  - The new array, will be sliced and the original will not be mutated
    (reference original for later)
@@ -92,4 +93,44 @@ Let's go follow the steps above, one at a time:
  - Inside the slice methods paramaters (where to begin, where slice ends)
 ```
 
+2. Initialize a state
 
+```
+ - Need to initialize a state 
+ - State is an object and inside holds keys (known as properties)
+ - Create a new key and call it displayedContacts
+ - State has special feature: once there are changes inside state, 
+   React will rerender those changes
+ - Console after render to see confirm new array changes
+```
+```js
+ Example:
+ class App extends Component {
+     state = {
+         displayedContacts: remainingContacts.slice(0,5)
+     }
+ }
+ render() {
+     console.log(this.state.displayedContacts) // relfects and array of five objects
+ }
+```
+
+ 3. Display a table of the five contacts
+
+ ```
+ - Create a table? How is that done?
+ -Inside the div, create a table tag and the following tags that belong inside
+ ```
+ ```js
+ <div className="App">
+    <table>
+        <thread> //table title
+            <tr> // table row
+                <th>Picture</th> // table heading
+                <th>Name</th>
+                <th>Popularity</th>
+            </tr>
+        </thread>
+    </table>
+ </div>
+ ```
