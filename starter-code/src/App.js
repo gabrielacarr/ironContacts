@@ -51,3 +51,9 @@ export default App;
 // creatinf attributes/ keys
 // special feature, once you make changes inside the state, the react will render to those new changes
 
+// CONSOLE LOG FIVE CONTACTS
+
+// console.log(this.state.fiveContacts), after render()
+// to print the five contacts
+// in console it reflects an array of five objects
+
