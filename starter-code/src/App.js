@@ -72,3 +72,12 @@ export default App;
 // <th> thread heading </th>
 // <th>table heading </th>
 // <tbody> anything below the heading row </tbody>
+
+// HOW TO GET NAME OF FIRST OBJECT
+
+// index of the array
+// {this.state.fiveContacts[0].name}
+// {} how to embed js to html
+// point to the [0] index
+// prints "Idris Elba"
+
