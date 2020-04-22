@@ -8,10 +8,23 @@ class App extends Component {
     fiveContacts: contacts.slice(0, 5), // slice to select the first five contacts
   };
 
+  // displayFive =  () => {
+  //   let newArray = this.state.fiveContacts.map(eachContact => {
+  //   return ( 
+  //     <tr>
+  //                 <td><img width="50 px" src={eachContact.pictureUrl} alt={eachContact.name}/> </td>
+  //                 <td>{eachContact.name}</td>
+  //                 <td>{eachContact.popularity}</td>
+  //                 </tr>
+  //   )
+  //   })
+  //   return newArray 
+  // }
+
   displayFive =  () => {
-    let newArray = this.state.fiveContacts.map(eachContact => {
+    return this.state.fiveContacts.map((eachContact, index) => {
     return ( 
-      <tr>
+      <tr key={index}>
                   <td><img width="50 px" src={eachContact.pictureUrl} alt={eachContact.name}/> </td>
                   <td>{eachContact.name}</td>
                   <td>{eachContact.popularity}</td>
@@ -150,7 +163,25 @@ export default App;
 // inside body.call the function {this.displayFive()}
 // this displatFive is the class component 
 
+// RETURNS
 
 // first return, /* returns the map and assign a new array */
-
 // second return, /* returns the function */
+
+
+// UNIQUE KEY 
+
+// parent tag, <tr>
+// specify attribute key and equal 
+// this is for array that is static, no further adjustments 
+// make code smaller, remove return, add (), add index as param
+// create a key tag for tr code
+// displayFive =  () => {
+// return this.state.fiveContacts.map((eachContact, index) => {
+//   return ( 
+//     <tr key={index}>
+
+// or making it a unique key
+// <tr key={eachContact.name}>
+// removes warnings on console, for cleaner code
+// or remove option for warnings on console
