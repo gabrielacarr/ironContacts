@@ -15,6 +15,7 @@ class App extends Component {
                 <tr>
                   <th>Picture</th>
                   <th>Name</th>
+                  
                   <th>Popularity</th>
                 </tr>
               </thead>
@@ -43,3 +44,55 @@ export default App;
 // where is it going to start and where will it end
 // .slice(0,5) // want to begin at index 0 and end at 5 elements
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice/
+
+// STATE
+
+// state object //
+// creatinf attributes/ keys
+// special feature, once you make changes inside the state, the react will render to those new changes
+
+// CONSOLE LOG FIVE CONTACTS
+
+// console.log(this.state.fiveContacts), after render()
+// to print the five contacts
+// in console it reflects an array of five objects
+
+// CREATING A TABLE
+
+// line 16
+// create a table // html format is <table></table>
+// <thead> first rows with headings </thead>
+// <tr> row </tr>
+// <th> thread heading </th>
+// <th>table heading </th>
+// <tbody> anything below the heading row </tbody>
+
+// HOW TO GET NAME OF FIRST OBJECT
+
+// index of the array
+// {this.state.fiveContacts[0].name}
+// {} how to embed js to html
+// point to the [0] index
+// prints "Idris Elba"
+
+
+// HOW TO GRAB THE IMAGE 
+// IDRIS ELBA
+
+// similar to above
+// since we are targeting the image url from the ./contacts.json 
+// create a self closing image tag 
+// gernerate src and alt
+// {this.state.fiveContacts[0].name}
+// point to the [0] index
+// place inside the src
+// for alt, place index of array for the name // {this.state.fiveContacts[0].name} 
+
+// ADJUSTING WIDTH OF IMG
+// place width inside the img
+// img width="50 px" src==""
+
+// POPULARITY
+
+// same as above, update to popularity rather than name
+// {this.state.fiveContacts[0].popularity} 
