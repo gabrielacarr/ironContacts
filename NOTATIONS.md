@@ -59,17 +59,16 @@ Steps for completing: Iteration 1
 - FIRST, What do you have from the instructions?
 
 ```
- Need to import producer's contacts from contacts.json into App.js inside the src folder
- Using DevTools, how can we determine what is inside the contacts.json file?
- By opening the local app source http://localhost:3000/ , inspect the console
- The console reflects that the contacts.json file is an array with 199 contacts
- Which holds objects that contain the following four properties (also known as keys): 
- name, pictureUrl, popularity, and id
+ - Need to import producer's contacts from contacts.json into App.js inside the src folder
+ - Using DevTools, how can we determine what is inside the contacts.json file?
+ - By opening the local app source http://localhost:3000/ , inspect the console
+ - The console reflects that the contacts.json file is an array with 199 contacts
+ - Which holds objects that contain the following four properties (also known as keys): 
+   name, pictureUrl, popularity, and id
 
 ```
 
 
-
-
+- NEXT, 
 
 
