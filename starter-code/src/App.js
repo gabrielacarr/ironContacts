@@ -8,34 +8,41 @@ class App extends Component {
     fiveContacts: contacts.slice(0, 5), // slice to select the first five contacts
   };
 
+  displayFive =  () => {
+    let newArray = this.state.fiveContacts.map(eachContact => {
+    return ( 
+      <tr>
+            <td><img width="50 px" src={eachContact.pictureUrl} alt={eachContact.name}/> </td>
+            <td>{eachContact.name}</td>
+            <td>{eachContact.popularity}</td>
+            </tr>
+    )
+    })
+    return newArray 
+  }
+
   // displayFive =  () => {
-  //   let newArray = this.state.fiveContacts.map(eachContact => {
+  //   return this.state.fiveContacts.map((eachContact, index) => {
   //   return ( 
-  //     <tr>
-  //           <td><img width="50 px" src={eachContact.pictureUrl} alt={eachContact.name}/> </td>
-  //           <td>{eachContact.name}</td>
-  //           <td>{eachContact.popularity}</td>
-  //           </tr>
+  //     <tr key={index}>
+  //                 <td><img width="50 px" src={eachContact.pictureUrl} alt={eachContact.name}/> </td>
+  //                 <td>{eachContact.name}</td>
+  //                 <td>{eachContact.popularity}</td>
+  //                 </tr>
   //   )
   //   })
   //   return newArray 
   // }
 
-  displayFive =  () => {
-    return this.state.fiveContacts.map((eachContact, index) => {
-    return ( 
-      <tr key={index}>
-                  <td><img width="50 px" src={eachContact.pictureUrl} alt={eachContact.name}/> </td>
-                  <td>{eachContact.name}</td>
-                  <td>{eachContact.popularity}</td>
-                  </tr>
-    )
-    })
-    return newArray 
+  addRandoContact = () => {
+    let randoNum = Math.floor(Math.random()*contacts.length)
+    console.log('rando', randoNum)
+    
   }
   render() {
     return (
           <div className="App">
+            <button onClick={this.addRandoContact}> Add Random </button>
             <table>
               <thead>
                 <tr>
@@ -185,3 +192,19 @@ export default App;
 // <tr key={eachContact.name}>
 // removes warnings on console, for cleaner code
 // or remove option for warnings on console
+
+
+
+/////////////////////////////////////////////////////////////////
+
+// BUTTON
+// inside <div>
+// place onClick method
+// above render(), create function for addRandoContact = () => {}
+// to call function, place addRandoContact inside of inClick as:
+// {this.addRandoContact}
+
+
+// RANDO TO ARRAY
+// let randoNum = Math.floor(Math.random()*contact.lengtht)
+// rnandom number
