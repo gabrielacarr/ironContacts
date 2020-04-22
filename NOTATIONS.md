@@ -83,7 +83,7 @@ At the end of this iteration, your application should look like this:
 
 1. Build a table with the first five contacts from contact.json 
 
-```
+
  - What method should be used to return the first five contacts? How do we do this?
  - By creating a new array and applying slice method
  - The new array, will be sliced and the original will not be mutated
@@ -91,18 +91,19 @@ At the end of this iteration, your application should look like this:
  
  - What is the slice method? .slice() removes the first elements from an array
  - Inside the slice methods paramaters (where to begin, where slice ends)
-```
+
 
 2. Initialize a state
+There are many ways of reducing block of code, however, we will follow the steps for the long way in order to understand how to make it shorthand.
 
-```
+
  - Need to initialize a state 
  - State is an object and inside holds keys (known as properties)
  - Create a new key and call it displayedContacts
  - State has special feature: once there are changes inside state, 
    React will rerender those changes
  - Console after render to see confirm new array changes
-```
+
 ```js
  Example:
  class App extends Component {
@@ -117,10 +118,15 @@ At the end of this iteration, your application should look like this:
 
  3. Display a table of the five contacts
 
- ```
+ 
  - Create a table? How is that done?
- -Inside the div, create a table tag and the following tags that belong inside
- ```
+ - Inside the div, create a table tag and the following tags that belong inside
+ - In the body tag, display the contacts name by adding the state 
+ - Embed js into html
+ - And the same for the other keys
+ - Keep in mind to adjust where the state applies to
+ 
+ 
  ```js
  <div className="App">
     <table>
@@ -131,6 +137,30 @@ At the end of this iteration, your application should look like this:
                 <th>Popularity</th>
             </tr>
         </thread>
+        <tbody>
+        <tr>
+             <td><img width="50 px" src="{this.state.displayedContacts[0].pictureUrl}" alt="<td>{this.state.displayedContacts[0].name}"</td> // prints image from .json file
+             <td>{this.state.displayedContacts[0].name}</td> // prints Idei Elba
+             <td>{this.state.displayedContacts[0].popularity}</td> // prints popularity amount
+        </tr>
+        </tbody>
     </table>
  </div>
  ```
+
+ - Essentially we need to repeat the code five times for each contact
+ - However, there is a way to reduce the block for the same outcome
+ - We can do this by creating a function that contains that block of code
+
+```js
+showFive = () => {
+    return this.state.displayedContacts.map(eachContact => {
+        return (
+             <td><img width="50 px" src="{this.state.displayedContacts[0].pictureUrl}" alt="<td>{this.state.displayedContacts[0].name}"</td> 
+             <td>{this.state.displayedContacts[0].name}</td> 
+             <td>{this.state.displayedContacts[0].popularity}</td>
+        )
+    })
+}
+```
+

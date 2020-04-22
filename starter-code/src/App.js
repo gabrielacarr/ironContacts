@@ -44,6 +44,7 @@ class App extends Component {
     return (
           <div className="App">
             <button onClick={this.addRandoContact}> Add Random </button>
+            
             <table>
               <thead>
                 <tr>
