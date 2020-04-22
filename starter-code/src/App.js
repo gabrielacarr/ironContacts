@@ -81,3 +81,24 @@ export default App;
 // point to the [0] index
 // prints "Idris Elba"
 
+
+// HOW TO GRAB THE IMAGE 
+// IDRIS ELBA
+
+// similar to above
+// since we are targeting the image url from the ./contacts.json 
+// create a self closing image tag 
+// gernerate src and alt
+// {this.state.fiveContacts[0].name}
+// point to the [0] index
+// place inside the src
+// for alt, place index of array for the name // {this.state.fiveContacts[0].name} 
+
+// ADJUSTING WIDTH OF IMG
+// place width inside the img
+// img width="50 px" src==""
+
+// POPULARITY
+
+// same as above, update to popularity rather than name
+// {this.state.fiveContacts[0].popularity} 
