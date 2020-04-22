@@ -53,10 +53,9 @@ At the end of this iteration, your application should look like this:
 
 ## PROCESS
 ### How do we get there? What's the thought process?
+### Steps for completing: Iteration 1
 
-Steps for completing: Iteration 1
-
-- FIRST, What do you have from the instructions?
+FIRST: What are we setting up in the instructions and what is it?
 
 ```
  - Need to import producer's contacts from contacts.json into App.js inside the src folder
@@ -68,7 +67,29 @@ Steps for completing: Iteration 1
 
 ```
 
+NEXT: What are the instructions asking to do? 
 
-- NEXT, 
+```
+ 1. Build a table with the first five contacts from contact.json 
+ 2. Display the keys of each contact
+ 3. Initialize a state
+ 
+```
+
+How is that accomplised? 
+Let's go follow the steps above, one at a time:
+
+
+1. Build a table with the first five contacts from contact.json 
+
+```
+ - What method should be used to grab the first five contacts? How do we do this?
+ - By creating a new array and applying slice method
+ - The new array, will be sliced and the original will not be mutated
+   (reference original for later)
+ 
+ - What is the slice method? .slice() removes the first elements from an array
+ - Inside the slice methods paramaters (where to begin, where slice ends)
+```
 
 

@@ -48,10 +48,6 @@ import contacts from './contacts.json';
 
 
 
-
-
-
-
 At the end of this iteration, your application should look like this:
 
 ![Screenshot](https://i.imgur.com/fPuwZXv.png)
