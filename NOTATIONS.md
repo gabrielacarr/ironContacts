@@ -54,15 +54,16 @@ At the end of this iteration, your application should look like this:
 ## PROCESS
 ### How do we get there? What's the thought process?
 
-Steps for completing the Iteration 1
+Steps for completing: Iteration 1
 
-- FIRST, What do you have from the instructions
+- FIRST, What do you have from the instructions?
 
 ```
- Impport producer's contacts from contacts.json into App.js
- Using DevTools, what can we determine is inside the contacts.json file?
+ Need to import producer's contacts from contacts.json into App.js inside the src folder
+ Using DevTools, how can we determine what is inside the contacts.json file?
+ By opening the local app source http://localhost:3000/ , inspect the console
  The console reflects that the contacts.json file is an array with 199 contacts
- Which holds objects that contain the following four properties: 
+ Which holds objects that contain the following four properties (also known as keys): 
  name, pictureUrl, popularity, and id
 
 ```
