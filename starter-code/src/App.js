@@ -12,10 +12,10 @@ class App extends Component {
   //   let newArray = this.state.fiveContacts.map(eachContact => {
   //   return ( 
   //     <tr>
-  //                 <td><img width="50 px" src={eachContact.pictureUrl} alt={eachContact.name}/> </td>
-  //                 <td>{eachContact.name}</td>
-  //                 <td>{eachContact.popularity}</td>
-  //                 </tr>
+  //           <td><img width="50 px" src={eachContact.pictureUrl} alt={eachContact.name}/> </td>
+  //           <td>{eachContact.name}</td>
+  //           <td>{eachContact.popularity}</td>
+  //           </tr>
   //   )
   //   })
   //   return newArray 
@@ -150,10 +150,10 @@ export default App;
 // EX:
 // return (
 //   <tr>
-//               <td><img width="50 px" src={eachContact.pictureUrl} alt={eachContacts[0].name}/> </td>
-//               <td>{eachContacts[0].name}</td>
-//               <td>{eachContacts[0].popularity}</td>
-//               </tr>
+//       <td><img width="50 px" src={eachContact.pictureUrl} alt={eachContacts[0].name}/> </td>
+//       <td>{eachContacts[0].name}</td>
+//       <td>{eachContacts[0].popularity}</td>
+//       </tr>
 // make array equal to every element in that array
 // iteration through array
 // and adding map
