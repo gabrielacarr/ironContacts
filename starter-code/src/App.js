@@ -5,7 +5,8 @@ import contacts from "./contacts.json";
 
 class App extends Component {
   state = {
-    fiveContacts: contacts.slice(0, 5), // slice to select the first five contacts
+    fiveContacts: contacts.splice(0, 5), // slice to select the first five contacts // 0,1,2,3,4,
+    remainContacts: contacts // 5-199
   };
 
   displayFive =  () => {
@@ -36,7 +37,7 @@ class App extends Component {
 
   addRandoContact = () => {
     let randoNum = Math.floor(Math.random()*contacts.length)
-    console.log('rando', randoNum)
+    console.log('rando', this.state.remainContact[randoNum])
     
   }
   render() {
@@ -73,11 +74,18 @@ export default App;
 
 // what is a method we can use to cut out a section of the array
 // state is an object, create a new property "contact"
-// use splice method to cut of the first five contacts that are going to be used
+// use splice method to cut of the first five contacts that are going to be use
 // slice returns a sections of an array, comes with two params
 // where is it going to start and where will it end
-// .slice(0,5) // want to begin at index 0 and end at 5 elements
+// .splice(0,5) // want to begin at index 0 and end at 5 elements
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice/
+// after splice, create remainContacts: contacts // 5-199
+// now there are two things
+// to avoid repeat, need to remove and add another
+// EXPLANATION
+// there is a rando number, and contact
+// this.state.remainContact needs to be place before the index on the console.log
+// used the new one that never changes, and can remove from remianing contacts
 
 // STATE
 
@@ -96,6 +104,8 @@ export default App;
 // console.log(this.state.fiveContacts), after render()
 // to print the five contacts
 // in console it reflects an array of five objects
+
+
 
 // CREATING A TABLE
 
@@ -146,7 +156,7 @@ export default App;
 // above render
 // inside of the function,create a new array
 // new array is equal to this.state.fiveContacts.map(eachContact)
-// map mwthod,
+// map method,
 // everytime that it loops through, the variable eachContact will equal one contact at a time
 // as a function, using fat arrow
 // return the repeated code
@@ -208,3 +218,7 @@ export default App;
 // RANDO TO ARRAY
 // let randoNum = Math.floor(Math.random()*contact.lengtht)
 // rnandom number
+// random creates repeats
+// we need to create a random number we havent used
+
+//
