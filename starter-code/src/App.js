@@ -42,8 +42,9 @@ class App extends Component {
   render() {
     return (
           <div className="App">
-            <button onClick={this.addRandoContact}> Add Random </button>
-            
+            <button onClick={this.addRandoContact}> Add Contact </button>
+            <button onClick={this.sortName}> Add Name  </button>
+            <button onClick={this.sortPopularity}> Add Popularity </button>
             <table>
               <thead>
                 <tr>
