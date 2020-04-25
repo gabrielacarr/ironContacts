@@ -10,35 +10,28 @@ class App extends Component {
   };
 
   displayFive =  () => {
-    let newArray = this.state.fiveContacts.map(eachContact => {
+    return this.state.fiveContacts.map((eachContact, index) => {
     return ( 
-      <tr>
+      <tr key={index}>
             <td><img width="50 px" src={eachContact.pictureUrl} alt={eachContact.name}/> </td>
             <td>{eachContact.name}</td>
             <td>{eachContact.popularity}</td>
             </tr>
     )
     })
-    return newArray 
   }
 
-  // displayFive =  () => {
-  //   return this.state.fiveContacts.map((eachContact, index) => {
-  //   return ( 
-  //     <tr key={index}>
-  //                 <td><img width="50 px" src={eachContact.pictureUrl} alt={eachContact.name}/> </td>
-  //                 <td>{eachContact.name}</td>
-  //                 <td>{eachContact.popularity}</td>
-  //                 </tr>
-  //   )
-  //   })
-  //   return newArray 
-  // }
 
   addRandoContact = () => {
-    let randoNum = Math.floor(Math.random()*contacts.length)
-    console.log('rando', this.state.remainContact[randoNum])
-    
+    if(this.state.remainContacts.length){
+      let randomIndex = Math.floor(Math.random()* this.state.remainContacts.length)
+      let randoContact = this.state.remainContacts[randomIndex]
+      let copyOfDisplayed = [...this.state.fiveContacts]
+      copyOfDisplayed.push(randoContact)
+
+
+      // this.setState()
+    }
   }
   render() {
     return (
