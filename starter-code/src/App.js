@@ -18,10 +18,15 @@ class App extends Component {
             <td><img width="50 px" src={eachContact.pictureUrl} alt={eachContact.name}/> </td>
             <td>{eachContact.name}</td>
             <td>{eachContact.popularity}</td>
+
+            // DELETE CONTACT BUTTON
+            <button onClick={() => this.deletedContact(index)}> Remove </button>
             </tr>
     )
     })
   }
+
+  deletedContact
 // RANDOM CONTACT
 
   addRandoContact = () => {
