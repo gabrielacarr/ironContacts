@@ -42,7 +42,16 @@ class App extends Component {
   sortName = () => {
     let copyOfDisplayed = [...this.state.fiveContacts]
     copyOfDisplayed.sort((a, b) => {
-      return a.name.localCompare(a.name)
+      return a.name.localCompare(b.name)
+    })
+    this.setState({
+      fiveContacts: copyOfDisplayed,
+    })
+  }
+  sortPopularity = () => {
+    let copyOfDisplayed = [...this.state.fiveContacts]
+    copyOfDisplayed.sort((a, b) => {
+      return a.popularity - b.popularity
     })
     this.setState({
       fiveContacts: copyOfDisplayed,
