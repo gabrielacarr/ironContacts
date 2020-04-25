@@ -39,6 +39,16 @@ class App extends Component {
     }
   }
 
+  sortName = () => {
+    let copyOfDisplayed = [...this.state.fiveContacts]
+    copyOfDisplayed.sort((a, b) => {
+      return a.name.localCompare(a.name)
+    })
+    this.setState({
+      fiveContacts: copyOfDisplayed,
+    })
+  }
+
   render() {
     return (
           <div className="App">
