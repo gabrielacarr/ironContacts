@@ -56,7 +56,7 @@ class App extends Component {
   sortPopularity = () => {
     let copyOfDisplayed = [...this.state.fiveContacts]
     copyOfDisplayed.sort((a, b) => {
-      return a.popularity - b.popularity
+      return b.popularity - a.popularity
     })
     this.setState({
       fiveContacts: copyOfDisplayed,
