@@ -8,7 +8,6 @@ class App extends Component {
     fiveContacts: contacts.splice(0, 5), // slice to select the first five contacts // 0,1,2,3,4,
     remainContacts: contacts // 5-199
   };
-
 // DISPLAY FIVE CONTACTS 
 
   displayFive =  () => {
