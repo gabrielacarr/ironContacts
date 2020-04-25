@@ -19,14 +19,21 @@ class App extends Component {
             <td>{eachContact.name}</td>
             <td>{eachContact.popularity}</td>
 
-            // DELETE CONTACT BUTTON
+            {/* // DELETE CONTACT BUTTON */}
             <button onClick={() => this.deletedContact(index)}> Remove </button>
             </tr>
     )
     })
   }
+// DELETE CONTACTS
 
-  deletedContact
+  deletedContact = (index) => {
+    let copyOfDisplayed = [...this.state.fiveContacts]
+    copyOfDisplayed.splice(index, 1)
+    this.setState ({
+      fiveContacts: copyOfDisplayed,
+    })
+  }
 // RANDOM CONTACT
 
   addRandoContact = () => {
@@ -72,6 +79,7 @@ class App extends Component {
   render() {
     return (
           <div className="App">
+            {/* // ADD AND SORT BUTTON */}
             <button onClick={this.addRandoContact}> Add Contact </button>
             <button onClick={this.sortName}> Sort by Name   </button>
             <button onClick={this.sortPopularity}> Sort by Popularity </button>
