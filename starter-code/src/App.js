@@ -43,8 +43,8 @@ class App extends Component {
     return (
           <div className="App">
             <button onClick={this.addRandoContact}> Add Contact </button>
-            <button onClick={this.sortName}> Add Name  </button>
-            <button onClick={this.sortPopularity}> Add Popularity </button>
+            <button onClick={this.sortName}> Sort by Name   </button>
+            <button onClick={this.sortPopularity}> Sort by Popularity </button>
             <table>
               <thead>
                 <tr>
