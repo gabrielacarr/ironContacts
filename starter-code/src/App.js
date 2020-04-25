@@ -29,10 +29,16 @@ class App extends Component {
       let copyOfDisplayed = [...this.state.fiveContacts]
       copyOfDisplayed.push(randoContact)
 
+    let copyOfRemain = [...this.state.remainContacts]
+   copyOfRemain.splice(randomIndex, 1)
 
-      // this.setState()
+      this.setState({
+        fiveContacts: copyOfDisplayed,
+        remainContacts: copyOfRemain,
+      })
     }
   }
+
   render() {
     return (
           <div className="App">
